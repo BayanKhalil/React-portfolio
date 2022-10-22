@@ -26,7 +26,7 @@ export const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setButtonText("Sending...");
-    let response = await fetch("http://localhost:5000/contact", {
+    let response = await fetch("https://portfolio-server334.herokuapp.com/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
@@ -79,9 +79,9 @@ export const Contact = () => {
                     </Col>
                     {
                       status.message &&
-                      <alert>
+                      
                         <p className={status.success === false ? "danger" : "success"}>{status.message}</p>
-                      </alert>
+                     
                     }
                   </Row>
                 </form>
